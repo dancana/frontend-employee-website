@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+{% block title %}
+    Home - Employee Management System
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Welcome to the Employee Management System</h1>
+        <p>This is the home page. From here, you can navigate to different pages:</p>
+        
+        <ul>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('add_employee') }}">Add Employee</a></li>
+            <li><a href="{{ url_for('employees') }}">View Employees</a></li>
+            <li><a href="{{ url_for('assignment') }}">Assignments</a></li>
+            <li><a href="{{ url_for('payment') }}">Payments</a></li>
+        </ul>
+    </div>
+{% endblock %}
